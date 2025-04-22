@@ -11,6 +11,10 @@ function speak(text) {
     window.speechSynthesis.speak(text_speak);
 }
 
+window.onload = function () {
+  wishMe();
+};
+
 function wishMe() {
     const hour = new Date().getHours();
     if (hour >= 0 && hour < 12) speak("Good Morning Boss...");
